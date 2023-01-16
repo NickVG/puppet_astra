@@ -10,3 +10,4 @@ echo "export PATH=$PATH:/opt/puppetlabs/bin" >> .bashrc
 
 apt update
 apt-get install puppetserver
+vim /etc/default/puppetserver
