@@ -1,3 +1,4 @@
+puppet-srv
 #!/bin/bash
 vim /etc/apt/sources.list
 echo "deb https://deb.debian.org/debian/               buster         main contrib non-free" >> /etc/apt/sources.list
@@ -11,3 +12,5 @@ echo "export PATH=$PATH:/opt/puppetlabs/bin" >> .bashrc
 apt update
 apt-get install puppetserver
 vim /etc/default/puppetserver
+
+root@puppet-01:~# puppet config set server puppet-srv.loc --section main
