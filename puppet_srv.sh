@@ -18,4 +18,7 @@ apt update
 apt-get install puppetserver
 vim /etc/default/puppetserver
 
-root@puppet-01:~# puppet config set server puppet-srv.loc --section main
+#AGENT
+apt-get install puppet-agent
+puppet config set server astra01.test.local --section main
+
