@@ -5,6 +5,7 @@ sudo apt install debian-archive-keyring
 vim /etc/apt/sources.list
 echo "deb https://deb.debian.org/debian/               buster         main contrib non-free" >> /etc/apt/sources.list
 echo "deb https://security.debian.org/debian-security/ buster/updates main contrib non-free" >> /etc/apt/sources.list
+rm /etc/apt/preferences.d/smolensk
 sudo apt update
 vim /etc/apt/preferences.d/smolensk
 apt update
