@@ -17,8 +17,11 @@ echo "export PATH=$PATH:/opt/puppetlabs/bin" >> .bashrc
 apt update
 apt-get install puppetserver
 vim /etc/default/puppetserver
+puppet config set server astra01.test.local --section main
+systemctl enable pupetserver --now
 
 #AGENT
 apt-get install puppet-agent
 puppet config set server astra01.test.local --section main
-
+systemctl enable --now puppet
+puppet ssl bootstrap
